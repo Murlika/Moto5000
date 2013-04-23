@@ -1,0 +1,76 @@
+jQuery(function ($) {
+
+jQuery(document).ready(function(e) {
+
+ //Checking IE version
+ //if ( $.browser.msie && $.browser.version <= 6 ) {
+ //           window.document.location = '/badbrowser.php';
+ //}
+
+
+// кривоватый аякс тут, надо бы поменять
+  var options = {
+    // элемент, который будет обновлен по ответу сервера
+    target: "#err_output",
+    url: "ajax_response.php",
+    type:'post',
+    beforeSubmit: showRequest, // функция, вызываемая перед передачей
+    success: showResponse, // функция, вызываемая при получении ответа
+    timeout: 3000 // тайм-аут
+  };
+    
+ jQuery('.form-vertical').submit(function(e) {
+   //$idD=$(this).attr("id");
+
+   //проверка формы
+   //$dd=$('#'+$idD).validate().form();
+   //if  ($dd)
+
+   $tk=jQuery(this).ajaxSubmit(options);
+
+    // !!! Важно !!!
+    // всегда возвращаем false, чтобы предупредить стандартные
+    // действия браузера (переход на страницу form.php)
+    return false;
+  });
+ 
+});
+
+// вызов перед передачей данных
+function showRequest(formData, jqForm, options) {
+    // formData - массив; здесь используется $.param чтобы преобразовать его в строку для вывода в alert(),
+    // (только в демонстрационных целях), но в самом плагине jQuery Form это совершается автоматически.
+    var queryString = $.param(formData);
+    // jqForm это jQuery объект, содержащий элементы формы.
+    // Для доступа к элементам формы используйте
+    // var formElement = jqForm[0];
+   // alert('Вот что мы передаем: \n\n' + queryString);
+    // здесь можно вернуть false чтобы запретить отправку формы;
+    // любое отличное от fals значение разрешит отправку формы.
+    return true;
+}
+
+// вызов после получения ответа
+function showResponse(responseText, statusText)  {
+    // для обычного html ответа, первый аргумент - свойство responseText
+    // объекта XMLHttpRequest
+
+    // если применяется метод ajaxSubmit (или ajaxForm) с использованием опции dataType
+    // установленной в 'xml', первый аргумент - свойство responseXML
+    // объекта XMLHttpRequest
+
+    // если применяется метод ajaxSubmit (или ajaxForm) с использованием опции dataType
+    // установленной в 'json', первый аргумент - объек json, возвращенный сервером.
+
+   // alert('Статус ответа сервера: ' + statusText + '\n\nТекст ответа сервера: \n' + responseText +
+   //     '\n\nЦелевой элемент div обновиться этим текстом.');
+  //  $('#gallery_click').click();
+  // $('#contact_name').val('Ваше имя');
+   //$('#contact_tel').val('Номер телефона');
+  // $('#contact_comment').val('Комментарий');
+    jQuery('#ModalAnsw').modal();
+
+}
+
+
+});
