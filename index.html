@@ -20,6 +20,8 @@
             }
         </style>
 
+
+        <link rel="stylesheet" href="css/slider.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" media="print" href="css/print.css">
 
@@ -36,21 +38,57 @@
     <body>
         
  <!-- Шапка сайта -->
-<header>
-    <div class="container">
-    <h1>Шапка сайта!</h1>
-    </div>
-</header>
+ <div class="container">
+ <header>
 
- <!-- Форма обратной связи -->
+<div class="row">
+    <div class="span4"><img src="img/logo.png" width="225" height="75" alt="MOTO500" class="logo"></div>
+  <div class="span5">
+      <img src="img/img1.png">
+      <img src="img/img2.png">
+      <img src="img/img3.png">
+
+  </div>
+  <div class="span3 pull-right">
+      <div class="tel"><span>+7-965-409-09-06</span><br>
+      <a href="#ModalContact" class="btn btn-warning" role="button" data-toggle="modal"><span class="phone"></span>Заказать звонок</a>
+      </div>
+
+  </div>
+</div>
+</header>
+</div>
+
+
+ <!-- Картинка+описание -->
         <div id="orderdiv">
             <div class="container">
-                
-                        <form class="form-vertical">
-                       
-                         <p class="formtitle">Это форма обратной связи</p>
-                         <span class="help-block">Узнайте подробности прямо сейчас, для этого заполните заявку и наш специалист свяжется с Вами</span>
-                         <label class="input">Контактное лицо: 
+
+                <div class="row">
+                    <div class="span8">
+                        <p>
+                        <div class="img">
+                <div id="slideshow">
+
+                    <ul class="slides">
+                    <li><img src="img/photos/1.jpg" alt="Marsa Alam underawter close up" /></li>
+                    <li><img src="img/photos/2.jpg" alt="Turrimetta Beach - Dawn" /></li>
+                    <li><img src="img/photos/3.jpg" alt="Power Station" /></li>
+                    <li><img src="img/photos/4.jpg" alt="Colors of Nature" /></li>
+                    </ul>
+
+                    <span class="arrow previous"></span>
+                    <span class="arrow next"></span>
+                </div>
+
+                        </div>
+
+                    </div>
+                    <div class="span4  pull-right">
+
+                              <form class="form-vertical">
+                         <span class="help-block">Заполните заявку прямо сейчас. Наш менеджер свяжется с Вами и сделает просчет предложения в день заявки.</span>
+                         <label class="input">Контактное лицо:
                          <input type="text" class="span3" placeholder="" name="fio">
                          </label>
                          <label class="input">Телефон:
@@ -59,41 +97,228 @@
                          <label class="input">E-mail:
                          <input type="text" class="span3" placeholder="" name="email">
                          </label>
-                        
+                         <label class="textarea">Ваш комментарий:
+                            <textarea rows="3" name="comment"></textarea>
+
+                         </label>
                          <button type="submit" class="btn btn-warning">Отправить</button>
                         </form>
+
+                    </div>
+
+                </div>
+
             </div>
+
         </div>
 
 
+
  <!-- услуги -->
+ <div class="garant">
  <div class="container">
-     <h2>Описание услуг</h2>
+     <div class="row">
+         <div class="span3"><img src="img/img4.png"><br>100% гарантия сроков</div>
+         <div class="span3"><img src="img/img5.png"><br>Мы гарантируем ответ в<br> течении одного часа</div>
+         <div class="span3"><img src="img/img6.png"><br>Скачать каталог</div>
+         <div class="span3"><img src="img/img7.png"><br>Скачать таблицу для подбора<br> размера мотозащиты</div>
+     </div>
   
+ </div>
+ </div>
+
+  <!-- tovar -->
+ <div class="tovar">
+ <div class="container">
+     <div class="row">
+     <div class="span7"><h2>Наша продукция</h2></div>
+     <div class="span4  pull-right">         <a href="#" class="btn btn-warning" role="button" data-toggle="modal">Заказать каталог</a></div>
+     </div>
+
+   <div class="row tvr">
+         <div class="span4"><img src="img/img8.png"><br>Мотозащиты для тела</div>
+   <div class="span4"><img src="img/img9.png"><br>Наколенники и
+налокотники</div>
+   <div class="span4"><img src="img/img10.png"><br>Перчатки</div>
+     </div>
+
+     <div class="row">
+         <div class="span1"></div>
+         <div class="span8">5 ключевых проблем, с которыми сталкиваются 95% клиентов</div>
+     </div>
+
+     <div class="row">
+      <div class="span1"></div>
+       <div class="span10">
+           <table><tr>
+                   <td>1</td>
+                   <td>Поставщик задерживает заказанные товар. В результате вы ожидаете месяцами, а поставщик за это не отвечает.</td>
+               </tr>
+<tr>
+                   <td>2</td>
+                   <td>Продают неликвид. Под видом нового продукта продают старый. В итоге он выйдет из строя через месяц. Поставщик за это не несет ответственности. А вы снова теряете деньги и свое время.
+</td>
+               </tr>
+               <tr>
+                   <td>3</td>
+                   <td>
+Цена неадекватная. 80% предложений на рынке - посредники. И посредники посредников. Делают наценку 200 - 300%. В итоге вы покупаете через 10 фирм. И переплачиваете во много раз.
+</td>
+               </tr>
+               <tr>
+                   <td>4</td>
+                   <td>Никаких гарантий. Когда вам продают через цепочку, вы покупаете без гарантий производителя. И концы в воду. Непонятно к кому обращаться. Завтра компания, у которой вы купили, просто пропадет.</td>
+               </tr>
+               <tr>
+                   <td>5</td>
+                   <td>
+Кидают. Делают неадекватно низкое по цене предложение. Берут предоплату 100%. И исчезают. Ни ОБЭП, ничего уже не поможет. К сожалению, пока на рынке - это общее место.</td>
+               </tr>
+
+           </table>
+
+</div>
+     </div>
+
+     <div class="row">
+         <div class="span1"></div>
+         <div class="span8">Почему клиенты довольны нашей работой и рекомендуют нас своим партнерам</div>
+     </div>
+
+     <div class="row klient">
+         <div class="span4">
+             <p class="title2">100% гарантия сроков</p>
+             <img src="img/img11.png">
+             <p>
+ У нас обширный склад. Бо'льшая часть продукции всегда в наличии. Если вы хотите заказать уникальную или редкую позицию, мы предложим кратчайшие сроки. Вы можете быть уверены, что товар придет вовремя.
+</p>
+
+         </div>
+         <div class="span4">
+             <p class="title2">Лучшая цена</p>
+             <img src="img/img12.png">
+             <p>
+Покупая у нас, вы получаете товар по лучшей цене на рынке. Потому что мы работаем напрямую и вы не получаете товар, прошедший через 10 рук.
+</p>
+
+         </div>
+         <div class="span4">
+             <p class="title2">Доставка до вашего объекта</p>
+             <img src="img/img13.png">
+             <p>
+Зачастую производители работают по принципу самовывоза. А доставляют посредники посредников. Мы доставляем прямо со склада до вашего дома.
+</p>
+
+         </div>
+     </div>
+     <div class="row klient">
+         <div class="span4">
+             <p class="title2">Напрямую от производителя</p>
+             <img src="img/img14.png">
+             <p>
+Вы получаете 100% заводскую гарантию на весь гарантийный срок и замену в случае заводских дефектов.
+</p>
+
+         </div>
+         <div class="span4">
+             <p class="title2">Мы продаем
+только новую продукцию</p>
+             <img src="img/img15.png">
+             <p>
+Все позиции сертифицированы. Мы предоставляем Вам полную техническую документацию
+</p>
+
+         </div>
+         <div class="span4">
+             <p class="title2">Доставка до вашего объекта</p>
+             <img src="img/img16.png">
+             <p>
+Мы не просто выслушаем и выставим счет, а порекомендуем лучшее и наиболее выгодное для Вас решение
+</p>
+
+         </div>
+     </div>
+
+     <div class="row">
+     <div class="span12"><h2>Нашу продукцию покупают</h2></div>
+     </div>
+
+     <div class="row poc">
+        <div class="span12">
+            <img src="img/img17.png">
+            <img src="img/img18.png">
+            <img src="img/img19.png">
+            <img src="img/img20.png">
+            <img src="img/img21.png">
+            
+        </div>
+     </div>
+  
+
+ </div>
  </div>
 
 
  <!-- футер -->
- <footer>
+
  <div class="container">
-     <p>Это футер</p>
-     <p><a href="404.html">404 error</a>
-     <p><a href="http://google.com">Google</a>
-
- </div>
+ <footer>
+     <div class="row">
+     <div class="span12">&#169; Copyright moto500.ru . Все права защищены.</div>
+     </div>
  </footer>
+ </div>
 
-  <!-- всплывающие окна -->
+
+   <!-- всплывающие окна -->
 
  <div class="modal hide fade " id="ModalAnsw" >
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >&times;</button>
-    <h3>Ваше сообщение отправлено!</h3>
+    <p class="title2">Ваше сообщение отправлено!</p>
   </div>
   <div class="modal-body">
       <p>Наш менеджер свяжется с Вами максимально быстро.</p>
   </div>
 </div>
+
+  <div class="modal hide fade " id="ModalContact" >
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >&times;</button>
+    <p class="title2">Заказ обратного звонка</p>
+  </div>
+  <div class="modal-body">
+      <p id="err_output"></p>
+      <form class="form-vertical">
+          <label class="input">Контактное лицо:
+          <input type="text" class="span3" placeholder="" name="contact_name">
+          </label>
+                         <label class="input">Телефон:
+                         <input type="text" class="span3" placeholder="" name="contact_tel">
+                         </label>
+                         <label class="input">E-mail:
+                         <input type="text" class="span3" placeholder="" name="contact_email">
+                         </label>
+                            <input type="hidden" name="normal" value="897ewrkljsfda8">
+				          <input name="type" type="hidden" value="main">
+                         <button type="submit" class="btn btn2">Отправить</button>
+                        </form>
+  </div>
+</div>
+
+
+<div class="modal hide fade " id="ModalPay" >
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >&times;</button>
+    <p class="title2">Купить за 649 руб.</p>
+  </div>
+  <div class="modal-body">
+      <p id="err_output"></p>
+      <iframe src='http://bluesman85.e-autopay.com/ordering/order_form.php?tovar_id=1&pay_mode=3' width='400px' height='500px' frameborder='0' scrolling='no'></iframe>
+
+  </div>
+</div>
+
 
 
   <!-- скрипты -->
@@ -103,6 +328,7 @@
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/libs/jquery.form-3.24/jquery.form.js"></script>
         <script src="js/plugins.js"></script>
+        <script src="js/slider.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
