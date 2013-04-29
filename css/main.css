@@ -34,7 +34,7 @@ footer, nav, header, section, aside {display: block}
 
 body { color: #000; font: 12px "Roboto-Regular", sans-serif;background:#121212 url("bg.png") no-repeat top center;padding: 0px;}
 
-
+.img_href,.img_href:hover,.img_href:visited{border:none;text-decoration: none;color:#fff;}
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -45,7 +45,7 @@ body { color: #000; font: 12px "Roboto-Regular", sans-serif;background:#121212 u
  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);}
 
 header{background:transparent url("bg_header.jpg") repeat-x top left;height:115px;}
-header .tel{text-align:right;float:right;padding-top: 30px;padding-right: 70px;}
+header .tel{text-align:right;float:right;padding-top: 30px;padding-right: 65px;}
 header .tel span{font: 20px "Roboto-BlackItalic", sans-serif;color:#fff;line-height: 1.25;}
 header .tel .btn{margin-top:10px;color:#fff;width:155px;padding:0px 12px 3px;text-align: left;}
 header .tel .btn .phone{background:transparent url("phone.png") no-repeat center left;padding-left:25px;margin-right: 10px;padding-bottom: 3px;}
@@ -68,11 +68,15 @@ border-radius: 5px;}
 .garant .container{background:transparent url("bg_header.jpg") repeat top left;height:160px;color:#fff;padding-bottom: 20px;}
 .garant .container img{padding: 20px;}
 .garant .container .span3{text-align: center;}
+.garant .container a{color:#fff;}
+
+
 
 .tovar .container{padding:40px;width:905px;}
 .tovar .container h2{font: 24px "Roboto-BlackItalic", sans-serif;color:#5f99bb;line-height: 0.75;}
 .tovar .container .pull-right{text-align: right;}
 .tovar .container .tvr .span4{font: 18px "Roboto-BlackItalic", sans-serif;color:#5f99bb;text-align: center;margin-left: 0px;margin-top: 20px;}
+.tovar .container .tvr a,.tovar .container .tvr a:hover,.tovar .container .tvr a:visited{color:#000;border: none;}
 .tovar .container .span8{font: 30px "Roboto-BlackItalic", sans-serif;color:#5f99bb;text-align: center;line-height: 1.15;margin:60px; 0;}
 .tovar .container table{font-size:14px;color:#5f99bb;}
 .tovar .container table tr td{padding-bottom: 15px;}
@@ -85,3 +89,22 @@ border-radius: 5px;}
 
 footer{background:transparent url("bg_header.jpg") repeat-x top left;height:70px;}
 footer .span12{padding-top:30px;color:#fff;padding-left:70px;}
+
+
+/*модальные окна*/
+.modal{width: 350px;}
+.modal .modal-body{overflow: hidden;}
+.modal p.title2{font: 24px "Roboto-BlackItalic", sans-serif;
+color: #5f99bb;
+line-height: 0.75;}
+
+.modal .form-vertical{padding:20px;background-color: #46728a;border-radius: 10px;margin:20px 50px 40px 0;color:#fff;}
+.modal .form-vertical .help-block{line-height: 1.25;color:#fff;text-align: center;}
+.modal .form-vertical input[type="text"],.form-vertical textarea{-moz-box-shadow:inset 2px 2px 8px 0px rgba(0,0,0,0.5);
+-webkit-box-shadow:inset 2px 2px 8px 0px rgba(0,0,0,0.5);
+box-shadow:inset 2px 2px 8px 0px rgba(0,0,0,0.5);
+border:none;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+border-radius: 5px;display: block;}

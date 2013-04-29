@@ -62,7 +62,7 @@ filter: progid:DXImageTransform.Microsoft.shadow(direction=270, color=#000000, s
 	top:50%;
 	margin-top:-15px;
 	cursor:pointer;
-	z-index:5000;
+	z-index:1020;
 }
 
 #slideshow .previous{ background-position:left top;left:0;}

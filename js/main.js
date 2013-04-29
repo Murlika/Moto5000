@@ -18,22 +18,22 @@ jQuery(document).ready(function(e) {
     success: showResponse, // функция, вызываемая при получении ответа
     timeout: 3000 // тайм-аут
   };
-    
+
  jQuery('.form-vertical').submit(function(e) {
-   //$idD=$(this).attr("id");
+   $idD=$(this).parent('div').parent('div');
 
    //проверка формы
    //$dd=$('#'+$idD).validate().form();
    //if  ($dd)
-
+  //  console.log($idD);
    $tk=jQuery(this).ajaxSubmit(options);
-
+   $idD.modal('hide');
     // !!! Важно !!!
     // всегда возвращаем false, чтобы предупредить стандартные
     // действия браузера (переход на страницу form.php)
     return false;
   });
- 
+
 });
 
 // вызов перед передачей данных

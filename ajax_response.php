@@ -1,7 +1,9 @@
 <?php
-$mailto='';
+//$mailto='info@moto500.ru';
+$mailto='anzhela42@cheb-site.net';
 $mail_types = array();
-$mail_types['main'] = 'Заказ ';
+$mail_types['main'] = 'Заказ обратного звонка';
+$mail_types['main2'] = 'Заказ каталога';
 
 //$mail_types['callback'] = 'Заказ обратного звонка';
 //$mail_types['project_us'] = 'inga34kkto@gmail.com';
@@ -24,11 +26,19 @@ function send_mail($mail, $subject, $post){
 
 	$text = $subject." на сайте ".$_SERVER['HTTP_HOST'].". \n\n";
 
-	$text .= sprintf("Имя: %s\n", $post['contact_name']);
-	$text .= sprintf("Телефон: %s\n", $post['contact_tel']);
+	$text .= sprintf("Имя: %s\n", $post['fio']);
+	$text .= sprintf("Телефон: %s\n", $post['tel']);
+        $text .= sprintf("Email: %s\n", $post['email']);
 	$text .= sprintf("Информация о заказе: %s\n", $post['comment']);
 
+
 	mail($mail, '=?utf-8?B?'.base64_encode($subject).'?=', $text, $headers);
-	//mail($mail, $subject, $text);
-}
+
+        if ($_POST['type']=='main2') {
+
+            mail($post['email'], '=?utf-8?B?'.base64_encode($subject).'?=', $text, $headers);
+        }
+
+        //mail($mail, $subject, $text);
+} 
 ?>
