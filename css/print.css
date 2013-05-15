@@ -1,0 +1,12 @@
+root { 
+    display: block;
+}
+
+/* ==========================================================================
+   Author's custom print styles
+   ========================================================================== */
+
+* {background-image: none;}
+a[href^=http]:after {content:" <" attr(href) ">"}
+#comments { page-break-before: always; }
+
