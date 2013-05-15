@@ -7,6 +7,18 @@ jQuery(document).ready(function(e) {
  //           window.document.location = '/badbrowser.php';
  //}
 
+  jQuery('#slideshow').slidesjs({
+        width: 640,
+        height: 430,
+         navigation: false,
+         play: {
+          auto: true,
+          interval: 4000,
+          swap: true,
+          pauseOnHover: true,
+          restartDelay: 2500
+        }
+      });
 
 // кривоватый аякс тут, надо бы поменять
   var options = {
@@ -18,7 +30,7 @@ jQuery(document).ready(function(e) {
     success: showResponse, // функция, вызываемая при получении ответа
     timeout: 3000 // тайм-аут
   };
-
+ 
  jQuery('.form-vertical').submit(function(e) {
    $idD=$(this).parent('div').parent('div');
 

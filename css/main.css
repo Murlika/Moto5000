@@ -32,7 +32,12 @@ a.btn{color:#fff;text-decoration: none;}
 
 footer, nav, header, section, aside {display: block}
 
-body { color: #000; font: 12px "Roboto-Regular", sans-serif;background:#121212 url("bg.png") no-repeat top center;padding: 0px;}
+
+
+
+body { color: #000; font: 12px "Roboto-Regular", sans-serif;background:#121212 url("bg.png") repeat top center;padding: 0px;}
+.right_bg{background:transparent url("bg_right.png") no-repeat top right;}
+.left_bg{background:transparent url("bg_left.png") no-repeat top left;}
 
 .img_href,.img_href:hover,.img_href:visited{border:none;text-decoration: none;color:#fff;}
 /* ==========================================================================
@@ -63,7 +68,7 @@ border:none;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;
 -khtml-border-radius: 5px;
 border-radius: 5px;}
 
-#slideshow{width:580px;height:330px;}
+#slideshow{margin: 0 auto;position: relative;}
 
 .garant .container{background:transparent url("bg_header.jpg") repeat top left;height:160px;color:#fff;padding-bottom: 20px;}
 .garant .container img{padding: 20px;}
@@ -88,8 +93,8 @@ border-radius: 5px;}
 .poc img{padding:20px 35px;}
 
 footer{background:transparent url("bg_header.jpg") repeat-x top left;height:70px;}
-footer .span12{padding-top:30px;color:#fff;padding-left:70px;}
-
+footer .span8{padding-top:30px;color:#fff;padding-left:70px;}
+footer .span2{padding-top:30px;color:#fff;text-align: right;float:right;padding-right:60px;}
 
 /*модальные окна*/
 .modal{width: 350px;}
@@ -108,3 +113,71 @@ border:none;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;
 -webkit-border-radius: 5px;
 -khtml-border-radius: 5px;
 border-radius: 5px;display: block;}
+
+ /* Prevent the slideshow from flashing on load */
+ .img{margin-left: 35px;padding: 10px 0;}
+ #slideshow {
+      display: none
+    }
+.slidesjs-container{margin: 0 20px;width: 550px !important;}
+   .slidesjs-pagination {
+      margin: 6px 0 0;
+      list-style: none;
+      margin-left: 46%;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      background-image: url(pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+      border-bottom: none;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    #slideshow a:link,
+    #slideshow a:visited {
+      color: #333
+    }
+
+    #slideshow a:hover,
+    #slideshow a:active {
+      color: #9e2020
+    }
+
+    .navbar {
+      overflow: hidden
+    }
+
+    #slideshow .slidesjs-navigation{
+        height: 35px;
+width: 35px;border-bottom: none;
+position: absolute;
+background: transparent url('arrows.png') no-repeat;
+top: 50%;
+margin-top: -15px;
+cursor: pointer;
+z-index: 1020;}
+
+#slideshow .slidesjs-previous{ background-position:left top;left:0;}
+#slideshow .slidesjs-previous:hover{ background-position:left bottom;}
+
+#slideshow .slidesjs-next{ background-position:right top;right:0;}
+#slideshow .slidesjs-next:hover{ background-position:right bottom;}
