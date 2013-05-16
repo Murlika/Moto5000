@@ -31,15 +31,31 @@ jQuery(document).ready(function(e) {
     timeout: 3000 // тайм-аут
   };
  
- jQuery('.form-vertical').submit(function(e) {
+ jQuery.validator.addMethod("phoneUS", function(phone_number, element) {
+    phone_number = phone_number.replace(/\s+/g, "");
+	return this.optional(element) || phone_number.length > 9 &&
+		phone_number.match(/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/);
+}, "Please specify a valid phone number");
+
+
+
+    jQuery('.form-vertical').submit(function(e) {
    $idD=$(this).parent('div').parent('div');
 
+   $idDS=$(this).attr("id");
+
+   console.log($idDS);
+
    //проверка формы
-   //$dd=$('#'+$idD).validate().form();
-   //if  ($dd)
-  //  console.log($idD);
-   $tk=jQuery(this).ajaxSubmit(options);
-   $idD.modal('hide');
+   $dd=$('#'+$idDS).validate().form();
+
+    //console.log($dd);
+   if ($dd) {
+    
+    $tk=jQuery(this).ajaxSubmit(options);
+    jQuery('#'+$idDS).resetForm();
+         $idD.modal('hide');
+   }
     // !!! Важно !!!
     // всегда возвращаем false, чтобы предупредить стандартные
     // действия браузера (переход на страницу form.php)

@@ -67,6 +67,8 @@ border:none;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;
 -webkit-border-radius: 5px;
 -khtml-border-radius: 5px;
 border-radius: 5px;}
+label.error{display: none !important;}
+.form-vertical input[type="text"].error{border:1px solid red !important;}
 
 #slideshow{margin: 0 auto;position: relative;}
 

@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Мотоэкипировка</title>
+        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="author" href="humans.txt" />
@@ -21,6 +21,7 @@
         </style>
 
 
+        <link rel="stylesheet" href="css/slider.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" media="print" href="css/print.css">
 
@@ -35,8 +36,7 @@
 
     </head>
     <body>
-        <div class="right_bg">
-        <div class="left_bg">
+
  <!-- Шапка сайта -->
  <div class="container">
  <header>
@@ -70,15 +70,17 @@
                         <div class="img">
                 <div id="slideshow">
 
-                    
-                    <img src="img/photos/11.jpg" alt="Leatt_Adventure" />
-                    <img src="img/photos/22.jpg" alt="Asterisk CELL knee brace" />
-                    <img src="img/photos/33.jpg" alt="Vertigo Corsa Moto Boots" />
-                    <img src="img/photos/44.jpg" alt="Bluetooth Helmet Headset VIMOTO V1098A" />
-					<img src="img/photos/55.jpg" alt="Furygan-AFS" />
-					<img src="img/photos/66.jpg" alt="Moto GPS TOM TOM" />
-                  <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a>
-      <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right icon-large"></i></a>
+                    <ul class="slides">
+                    <li><img src="img/photos/11.jpg" alt="Leatt_Adventure" /></li>
+                    <li><img src="img/photos/22.jpg" alt="Asterisk CELL knee brace" /></li>
+                    <li><img src="img/photos/33.jpg" alt="Vertigo Corsa Moto Boots" /></li>
+                    <li><img src="img/photos/44.jpg" alt="Bluetooth Helmet Headset VIMOTO V1098A" /></li>
+					<li><img src="img/photos/55.jpg" alt="Furygan-AFS" /></li>
+					<li><img src="img/photos/66.jpg" alt="Moto GPS TOM TOM" /></li>
+                    </ul>
+
+                    <span class="arrow previous"></span>
+                    <span class="arrow next"></span>
                 </div>
 
                         </div>
@@ -86,16 +88,16 @@
                     </div>
                     <div class="span4  pull-right">
 
-                              <form class="form-vertical" id="f3">
+                              <form class="form-vertical">
                          <span class="help-block">Заполните заявку прямо сейчас. Наш менеджер свяжется с Вами и сделает просчет предложения в день заявки.</span>
                          <label class="input">Контактное лицо:
-                         <input type="text" class="span3 required" placeholder="" name="fio" required>
+                         <input type="text" class="span3" placeholder="" name="fio">
                          </label>
                          <label class="input">Телефон:
-                         <input type="text" class="span3 phoneUS" placeholder="" name="tel" required>
+                         <input type="text" class="span3" placeholder="" name="tel">
                          </label>
                          <label class="input">E-mail:
-                         <input type="text" class="span3 email" placeholder="" name="email" required >
+                         <input type="text" class="span3" placeholder="" name="email">
                          </label>
                          <label class="textarea">Ваш комментарий:
                             <textarea rows="3" name="comment"></textarea>
@@ -205,7 +207,7 @@
 
          </div>
          <div class="span4">
-             <p class="title2">Доставка до вашего дома</p>
+             <p class="title2">Доставка до вашего объекта</p>
              <img src="img/img13.png">
              <p>
 Зачастую производители работают по принципу самовывоза. А доставляют посредники посредников. Мы доставляем прямо со склада до вашего дома.
@@ -232,7 +234,7 @@
 
          </div>
          <div class="span4">
-             <p class="title2">С нами легко!</p>
+             <p class="title2">Доставка до вашего объекта</p>
              <img src="img/img16.png">
              <p>
 Мы не просто выслушаем и выставим счет, а порекомендуем лучшее и наиболее выгодное для Вас решение
@@ -266,9 +268,93 @@
  <div class="container">
  <footer>
      <div class="row">
-     <div class="span8">&#169; Copyright moto500.ru . Все права защищены.</div>
-     <div class="span2">
-         		<!-- Yandex.Metrika informer -->
+     <div class="span12">&#169; Copyright moto500.ru . Все права защищены.</div>
+     </div>
+ </footer>
+ </div>
+
+
+   <!-- всплывающие окна -->
+
+ <div class="modal hide fade " id="ModalAnsw" >
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >&times;</button>
+    <p class="title2">Ваше сообщение отправлено!</p>
+  </div>
+  <div class="modal-body">
+      <p>Наш менеджер свяжется с Вами максимально быстро.</p>
+  </div>
+</div>
+
+  <div class="modal hide fade " id="ModalContact" >
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >&times;</button>
+    <p class="title2">Заказ обратного звонка</p>
+  </div>
+  <div class="modal-body">
+      <p id="err_output"></p>
+             <form class="form-vertical"  id="f2">
+
+                         <label class="input">Контактное лицо:
+                         <input type="text" class="span3" placeholder="" name="fio">
+                         </label>
+                         <label class="input">Телефон:
+                         <input type="text" class="span3" placeholder="" name="tel">
+                         </label>
+                         <label class="input">E-mail:
+                         <input type="text" class="span3" placeholder="" name="email">
+                         </label>
+                         <label class="textarea">Ваш комментарий:
+                            <textarea rows="3" name="comment"></textarea>
+
+                         </label>
+                         <input type="hidden" name="normal" value="897ewrkljsfda8">
+			<input name="type" type="hidden" value="main">
+                         <button type="submit" class="btn btn-warning">Отправить</button>
+                        </form>
+  </div>
+</div>
+
+  <div class="modal hide fade " id="ModalContact2" >
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >&times;</button>
+    <p class="title2">Заказ каталога</p>
+  </div>
+  <div class="modal-body">
+      <p id="err_output"></p>
+             <form class="form-vertical" id="f1">
+
+                         <label class="input">Контактное лицо:
+                         <input type="text" class="span3" placeholder="" name="fio">
+                         </label>
+                         <label class="input">Телефон:
+                         <input type="text" class="span3" placeholder="" name="tel">
+                         </label>
+                         <label class="input">E-mail:
+                         <input type="text" class="span3" placeholder="" name="email">
+                         </label>
+                         <label class="textarea">Ваш комментарий:
+                            <textarea rows="3" name="comment"></textarea>
+
+                         </label>
+                         <input type="hidden" name="normal" value="897ewrkljsfda8">
+			<input name="type" type="hidden" value="main2">
+                         <button type="submit" class="btn btn-warning">Отправить</button>
+                        </form>
+  </div>
+</div>
+
+
+  <!-- скрипты -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>');</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/libs/jquery.form-3.24/jquery.form.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/slider.js"></script>
+        <script src="js/main.js"></script>
+		<!-- Yandex.Metrika informer -->
 <a href="http://metrika.yandex.ru/stat/?id=21145786&amp;from=informer"
 target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/21145786/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
 style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:21145786,lang:'ru'});return false}catch(e){}"/></a>
@@ -300,96 +386,5 @@ style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" tit
 </script>
 <noscript><div><img src="//mc.yandex.ru/watch/21145786" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-
-     </div>
-     </div>
- </footer>
- </div>
-
-
-   <!-- всплывающие окна -->
-
- <div class="modal hide fade " id="ModalAnsw" >
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >&times;</button>
-    <p class="title2">Ваше сообщение отправлено!</p>
-  </div>
-  <div class="modal-body">
-      <p>Наш менеджер свяжется с Вами максимально быстро.</p>
-  </div>
-</div>
-
-  <div class="modal hide fade " id="ModalContact" >
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >&times;</button>
-    <p class="title2">Заказ обратного звонка</p>
-  </div>
-  <div class="modal-body">
-      <p id="err_output"></p>
-             <form class="form-vertical"  id="f2">
-
-                         <label class="input">Контактное лицо:
-                         <input type="text" class="span3 required" placeholder="" name="fio" required>
-                         </label>
-                         <label class="input">Телефон:
-                         <input type="text" class="span3 required phoneUS" placeholder="" name="tel" required>
-                         </label>
-                         <label class="input">E-mail:
-                         <input type="text" class="span3 email" placeholder="" name="email" required>
-                         </label>
-                         <label class="textarea">Ваш комментарий:
-                            <textarea rows="3" name="comment"></textarea>
-
-                         </label>
-                         <input type="hidden" name="normal" value="897ewrkljsfda8">
-			<input name="type" type="hidden" value="main">
-                         <button type="submit" class="btn btn-warning">Отправить</button>
-                        </form>
-  </div>
-</div>
-
-  <div class="modal hide fade " id="ModalContact2" >
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >&times;</button>
-    <p class="title2">Заказ каталога</p>
-  </div>
-  <div class="modal-body">
-      <p id="err_output"></p>
-             <form class="form-vertical" id="f1">
-
-                         <label class="input">Контактное лицо:
-                         <input type="text" class="span3 required" placeholder="" name="fio" required>
-                         </label>
-                         <label class="input">Телефон:
-                         <input type="text" class="span3 required phoneUS" placeholder="" name="tel" required>
-                         </label>
-                         <label class="input">E-mail:
-                             <input type="text" class="span3 email" placeholder="" name="email" required>
-                         </label>
-                         <label class="textarea">Ваш комментарий:
-                            <textarea rows="3" name="comment"></textarea>
-
-                         </label>
-                         <input type="hidden" name="normal" value="897ewrkljsfda8">
-			<input name="type" type="hidden" value="main2">
-                         <button type="submit" class="btn btn-warning">Отправить</button>
-                        </form>
-  </div>
-</div>
-
-
-  <!-- скрипты -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>');</script>
-
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/libs/jquery.form-3.24/jquery.form.js"></script>
-        <script src="js/libs/jquery-validate-1.10.0/jquery.validate.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/slider.js"></script>
-        <script src="js/main.js"></script>
-
-        </div>        </div>
     </body>
-
-        </html>
+</html>
